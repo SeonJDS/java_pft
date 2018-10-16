@@ -4,25 +4,18 @@ public class MyFirstProgramm {
 
     public static void main(String[] args) {
 
-        hello("Vasya!");
+        /*hello("Vasya!");
 
-        double l = 5;
-        System.out.println("Area of a square with a side that euqals: " + l + " = " + area(l));
+        Square s = new Square(5);
+        System.out.println("Area of a square with a side that euqals: " + s.l + " = " + s.area());
 
-        double a = 4;
-        double b = 6;
-        System.out.println("Area of a rectangle with sides that are equl: " + a + " & " + b + " = " + area(a, b));
+        Rectangle r = new Rectangle(4,6);
+        System.out.println("Area of a rectangle with sides that are equl: " + r.a + " & " + r.b + " = " + r.area());*/
+
     }
 
-    public static void  hello(String name) {
+    /*public static void  hello(String name) {
         System.out.println("Hello, " + name);
-    }
+    }*/
 
-    public static double  area(double l) {
-        return l * l;
-    }
-
-    public static double area(double a, double b) {
-        return a * b;
-    }
 }
