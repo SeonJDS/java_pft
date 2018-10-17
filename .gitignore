@@ -4,6 +4,14 @@
 # Ignore Gradle GUI config
 gradle-app.setting
 
+### Java
+*.class
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
+*.idea
+
+
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
@@ -13,6 +21,5 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 .idea/workspace.xml
-sandbox/build/classes/java/main/ru/stqa/pft/sandbox/PointsHomeWork.class
-sandbox/build/classes/java/main/ru/stqa/pft/sandbox/PointsHomeWork.class
-sandbox/build/classes/java/main/ru/stqa/pft/sandbox/Point.class
+.idea/modules/sandbox_main.iml
+.idea/gradle.xml
