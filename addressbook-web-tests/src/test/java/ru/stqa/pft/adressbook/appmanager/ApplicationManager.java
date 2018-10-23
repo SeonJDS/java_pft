@@ -3,7 +3,7 @@ package ru.stqa.pft.adressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.stqa.pft.adressbook.GroupData;
+import ru.stqa.pft.adressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
