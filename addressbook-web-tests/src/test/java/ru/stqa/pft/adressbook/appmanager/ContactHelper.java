@@ -25,4 +25,19 @@ public class ContactHelper extends HelperBase {
         type(By.name("email"), contactData.getEmail());
     }
 
+    public void selectContact() {
+        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td/input"));
+    }
+
+    public void initContactModification() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void deleteSelectedContacts() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void acceptContactDeletionAlert() {
+        wd.switchTo().alert().accept();
+    }
 }
