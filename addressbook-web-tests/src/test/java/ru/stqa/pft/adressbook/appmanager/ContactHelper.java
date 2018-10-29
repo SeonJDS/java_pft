@@ -14,6 +14,10 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
+    public void goToAddContactsPage() {
+        click(By.xpath("//a[contains(text(),'add new')]"));
+    }
+
     public void submitContactForm() {
         click(By.xpath("(//input[@name='submit'])[2]"));
     }
@@ -51,6 +55,17 @@ public class ContactHelper extends HelperBase {
     }
 
     public void submitContactModificationForm() {
-        click(By.xpath("//div[@id='content']/form[2]/input[2]"));
+        click(By.xpath("//*[@id=\"content\"]/form[1]/input[22]"));
+    }
+
+    public void createContact(ContactData contact, boolean creation) {
+        goToAddContactsPage();
+        fillContactForm(new ContactData("test1", "test2", "1234567890", "test@test.com", "test1"), true);
+        submitContactForm();
+        returnToHomePage();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[2]/td/input"));
     }
 }
