@@ -60,7 +60,7 @@ public class ContactHelper extends HelperBase {
 
     public void createContact(ContactData contact, boolean creation) {
         goToAddContactsPage();
-        fillContactForm(new ContactData("test1", "test2", "1234567890", "test@test.com", "test1"), true);
+        fillContactForm(contact, true);
         submitContactForm();
         returnToHomePage();
     }

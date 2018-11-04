@@ -14,7 +14,7 @@ public class ApplicationManager {
 
     private ContactHelper contactHelper;
     private SessionHelper sessionHelper;
-    private  NavigationHelper navigationHelper;
+    private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private String browser;
 
