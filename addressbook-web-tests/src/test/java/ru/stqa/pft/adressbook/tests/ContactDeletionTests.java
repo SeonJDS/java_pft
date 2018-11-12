@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ContactDeletionTests extends TestBase {
 
-    @Test
+    @Test (enabled = false)
     public void testContactDeletion() {
         if(! app.getContactHelper().isThereAContact()) { //проверка наличия контакта
             app.getNavigationHelper().gotoGroupPage();
