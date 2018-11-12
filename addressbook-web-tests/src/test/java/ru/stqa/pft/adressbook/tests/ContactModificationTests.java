@@ -10,8 +10,9 @@ import java.util.List;
 
 public class ContactModificationTests extends TestBase {
 
-    @Test (enabled = false)
+    @Test
     public void testContactModification() {
+        app.getNavigationHelper().goToHomePage();
         if(! app.getContactHelper().isThereAContact()) { //проверка наличия контакта
             app.getNavigationHelper().gotoGroupPage();
             if(! app.getGroupHelper().isThereAGroup()){ //проверка наличия группы
