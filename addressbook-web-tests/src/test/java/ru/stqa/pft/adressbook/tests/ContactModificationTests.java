@@ -15,8 +15,8 @@ public class ContactModificationTests extends TestBase {
         app.goTo().goToHomePage();
         if(! app.getContactHelper().isThereAContact()) { //проверка наличия контакта
             app.goTo().groupPage();
-            if(! app.group().isThereAGroup()){ //проверка наличия группы
-                app.group().create(new GroupData("test1", null, null));
+            if(app.group().list().size() == 0){ //проверка наличия группы
+                app.group().create(new GroupData().withName("test1"));
             }
             app.getContactHelper().createContact(new ContactData("test1", "test2", "1234567890", "test@test.com", "test1"), true);
         }

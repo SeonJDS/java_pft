@@ -10,13 +10,16 @@ import java.util.List;
 
 public class ContactCreationTests extends TestBase{
 
+  @BeforeMethod
+  public void ensurePreconditions() {
+    app.goTo().groupPage();
+    if (app.group().list().size() == 0){
+      app.group().create(new GroupData().withName("test1"));
+    }
+  }
+
   @Test
   public void testContactCreation() {
-    app.goTo().groupPage();
-    if (! app.group().isThereAGroup()){
-      GroupData group = new GroupData("test1", null, null);
-      app.group().create(group);
-    }
     app.goTo().goToHomePage();
     List<ContactData> before = app.getContactHelper().getContactList();
     ContactData contact = new ContactData("test1", "test2", "1234567890", "test@test.com", "test1");
