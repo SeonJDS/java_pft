@@ -10,10 +10,10 @@ import java.util.List;
 
 public class ContactCreationTests extends TestBase{
 
-  @BeforeMethod
+  @BeforeMethod(enabled = false)
   public void ensurePreconditions() {
     app.goTo().groupPage();
-    if (app.group().list().size() == 0){
+    if (app.group().all().size() == 0){
       app.group().create(new GroupData().withName("test1"));
     }
   }
