@@ -29,3 +29,4 @@ gradle-app.setting
 *.bin
 *.js
 addressbook-web-tests/build/tmp/test/
+addressbook-web-tests/build/tmp/testContacts/

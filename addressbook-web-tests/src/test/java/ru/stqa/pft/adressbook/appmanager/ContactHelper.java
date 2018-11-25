@@ -66,6 +66,7 @@ public class ContactHelper extends HelperBase {
         goToAddContactsPage();
         fillContactForm(contact, creation);
         submitContactForm();
+        contactCache = null;
         returnToHomePage();
     }
 
@@ -73,6 +74,7 @@ public class ContactHelper extends HelperBase {
         initContactModificationById(contact.getId());
         fillContactForm(contact, creation);
         submitContactModificationForm();
+        contactCache = null;
         returnToHomePage();
     }
 
@@ -80,6 +82,7 @@ public class ContactHelper extends HelperBase {
         selectContactById(contact.getId());
         deleteSelectedContacts();
         acceptContactDeletionAlert();
+        contactCache = null;
         returnToHomePage();
     }
 
@@ -87,8 +90,17 @@ public class ContactHelper extends HelperBase {
         return isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[2]/td/input"));
     }
 
+    public int count() {
+        return wd.findElements(By.cssSelector("tr[name='entry']")).size();
+    }
+
+    private Contacts contactCache = null;
+
     public Contacts all() {
-        Contacts contacts = new Contacts();
+        if (contactCache != null) {
+            return new Contacts(contactCache);
+        }
+        contactCache = new Contacts();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=entry]"));
         for (WebElement element : elements) {
             List<WebElement> cells = element.findElements(By.tagName("td"));
@@ -100,9 +112,9 @@ public class ContactHelper extends HelperBase {
             String allEmails = cells.get(4).getText();
             ContactData contact = new ContactData().withId(id).withFirstName(firstname)
                     .withLastName(lastname).withAllPhones(allPhones).withAddress(address).withAllEmails(allEmails);
-            contacts.add(contact);
+            contactCache.add(contact);
         }
-        return contacts;
+        return new Contacts(contactCache);
     }
 
     public ContactData infoFromEditForm(ContactData contact) {
