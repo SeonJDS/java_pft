@@ -23,3 +23,9 @@ gradle-app.setting
 .idea/workspace.xml
 .idea/modules/sandbox_main.iml
 .idea/gradle.xml
+*.css
+*.html
+*.idx
+*.bin
+*.js
+addressbook-web-tests/build/tmp/test/
