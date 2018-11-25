@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.adressbook.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-25T02:46:59" hostname="LAPTOP-PATQFI3L" time="0.816">
+  <properties/>
+  <testcase name="testGroupModification" classname="ru.stqa.pft.adressbook.tests.GroupModificationTests" time="0.816"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

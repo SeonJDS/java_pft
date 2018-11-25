@@ -10,6 +10,9 @@ gradle-app.setting
 .idea/*.iml
 .idea/modules
 *.idea
+*.html
+*.bin
+*.css
 
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
@@ -23,3 +26,10 @@ gradle-app.setting
 .idea/workspace.xml
 .idea/modules/sandbox_main.iml
 .idea/gradle.xml
+addressbook-web-tests/build/tmp/test/
+*.html
+addressbook-web-tests/build/reports/tests/test/index.html
+*.js
+*.html
+*.bin
+*.idx
