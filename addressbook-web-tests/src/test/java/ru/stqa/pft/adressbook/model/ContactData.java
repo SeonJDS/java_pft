@@ -231,6 +231,9 @@ public class ContactData {
             "id=" + id +
             ", firstname='" + firstname + '\'' +
             ", lastname='" + lastname + '\'' +
+            ", homePhone='" + homePhone + '\'' +
+            ", email='" + email + '\'' +
+            ", group='" + group + '\'' +
             '}';
   }
 
