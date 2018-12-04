@@ -75,8 +75,7 @@ public class ContactData {
     if (homePhone != null ? !homePhone.equals(that.homePhone) : that.homePhone != null) return false;
     if (allPhones != null ? !allPhones.equals(that.allPhones) : that.allPhones != null) return false;
     if (email != null ? !email.equals(that.email) : that.email != null) return false;
-    if (allEmails != null ? !allEmails.equals(that.allEmails) : that.allEmails != null) return false;
-    return group != null ? group.equals(that.group) : that.group == null;
+    return allEmails != null ? allEmails.equals(that.allEmails) : that.allEmails == null;
   }
 
   @Override
@@ -88,7 +87,6 @@ public class ContactData {
     result = 31 * result + (allPhones != null ? allPhones.hashCode() : 0);
     result = 31 * result + (email != null ? email.hashCode() : 0);
     result = 31 * result + (allEmails != null ? allEmails.hashCode() : 0);
-    result = 31 * result + (group != null ? group.hashCode() : 0);
     return result;
   }
 
