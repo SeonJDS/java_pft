@@ -73,9 +73,7 @@ public class ContactData {
     if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
     if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null) return false;
     if (homePhone != null ? !homePhone.equals(that.homePhone) : that.homePhone != null) return false;
-    if (allPhones != null ? !allPhones.equals(that.allPhones) : that.allPhones != null) return false;
-    if (email != null ? !email.equals(that.email) : that.email != null) return false;
-    return allEmails != null ? allEmails.equals(that.allEmails) : that.allEmails == null;
+    return email != null ? email.equals(that.email) : that.email == null;
   }
 
   @Override
@@ -84,9 +82,7 @@ public class ContactData {
     result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
     result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
     result = 31 * result + (homePhone != null ? homePhone.hashCode() : 0);
-    result = 31 * result + (allPhones != null ? allPhones.hashCode() : 0);
     result = 31 * result + (email != null ? email.hashCode() : 0);
-    result = 31 * result + (allEmails != null ? allEmails.hashCode() : 0);
     return result;
   }
 
