@@ -20,7 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestBase {
 
-    Logger logger = LoggerFactory.getLogger(TestBase.class);
+    //Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     protected static final ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
 
@@ -34,7 +34,7 @@ public class TestBase {
         app.stop();
     }
 
-    @BeforeMethod
+    /*@BeforeMethod
     public void logTestStart(Method m, Object[] p) {
         logger.info("Start test " + m.getName() + " with parameters " + Arrays.asList(p));
     }
@@ -42,7 +42,7 @@ public class TestBase {
     @AfterMethod(alwaysRun = true)
     public void logTestStop(Method m) {
         logger.info("Stop test " + m.getName());
-    }
+    }*/
 
     public void verifyGroupListInUI() {
         if (Boolean.getBoolean("verifyUI")) {
