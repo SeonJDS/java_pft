@@ -1,0 +1,14 @@
+[
+  {
+    "firstname": "firstname 0",
+    "lastname": "lastname 0",
+    "homePhone": "1234567890",
+    "email": "email0@email.com"
+  },
+  {
+    "firstname": "firstname 1",
+    "lastname": "lastname 1",
+    "homePhone": "1234567891",
+    "email": "email1@email.com"
+  }
+]

@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'org.testng:testng:7.0.0-beta1' //тестовый фреймворк
+    compile 'org.seleniumhq.selenium:selenium-java:3.14.0' //вебдрайвер
+    compile 'org.hamcrest:java-hamcrest:2.0.0.0' //улучшенные проверки
+    compile 'com.beust:jcommander:1.72' //чтение данных с коммандной строки
+    compile 'com.thoughtworks.xstream:xstream:1.4.11.1' // чтение и записсь XML формата
+    compile 'com.google.code.gson:gson:2.8.5' //чтение и записсь jSOn формата
+    compile 'ch.qos.logback:logback-classic:1.2.3' //логирование
+    compile 'mysql:mysql-connector-java:8.0.13' //подключение базы данных
+    compile 'org.hibernate:hibernate-core:5.3.7.Final' //
+}
